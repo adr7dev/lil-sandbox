@@ -9,7 +9,7 @@
     "biome:check": "biome check . --no-errors-on-unmatched --files-ignore-unknown=true --error-on-warnings",
     "biome:check:apply": "biome check . --apply",
     "biome:ci": "biome ci . --no-errors-on-unmatched --files-ignore-unknown=true --error-on-warnings",
-    "test:jest": "jest",
+    "test:jest": "jest --passWithNoTests",
     "test:jest:coverage": "jest --coverage",
     "test:types": "tsc",
     "test:all": "npm run test:types && npm run biome:check && npm run test:jest",

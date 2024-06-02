@@ -1,0 +1,38 @@
+{
+  "name": "ct-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "biome:check": "biome check . --no-errors-on-unmatched --files-ignore-unknown=true --error-on-warnings",
+    "biome:check:apply": "biome check . --apply",
+    "biome:ci": "biome ci . --no-errors-on-unmatched --files-ignore-unknown=true --error-on-warnings",
+    "test:jest": "jest",
+    "test:jest:coverage": "jest --coverage",
+    "test:types": "tsc",
+    "test:all": "npm run test:types && npm run biome:check && npm run test:jest",
+    "test:all:ci": "npm run test:types && npm run biome:ci && npm run test:jest"
+  },
+  "dependencies": {
+    "next": "15.0.0-rc.0",
+    "react": "19.0.0-rc-f994737d14-20240522",
+    "react-dom": "19.0.0-rc-f994737d14-20240522"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.7.3",
+    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/react": "^15.0.7",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "lefthook": "^1.6.14",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
